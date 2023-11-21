@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">	
+	<meta name="description" content="Web development">
+	<meta name="keywords"    content="Order page">
+	<meta name="author"      content="Thanh Thy">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Assignment 2 - Sweet Life</title>
+      <!-- add icon title-->
+  <link rel = "icon" href = "images/icon-profile.png" type = "image/x-icon">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/mobile.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+  <script src="js/order.js"></script> 
+</head>
+<body>
+     <!----------------------------------NAV Section----------------------------->    
+     <header>
+        <nav class="navbar">
+          <div class="navbar-container container">
+              <input type="checkbox">
+              <div class="nav-lines">
+                  <span class="line line1"></span>
+                  <span class="line line2"></span>
+                  <span class="line line3"></span>
+              </div>
+              <ul class="menu-items">
+                <li><a href="index.html">Home</a></li>  
+                <li><a href="registration.html">Register</a></li>
+                <li><a class="active" href="#">Order</a></li>
+                <li><a href="features.html">Features</a></li>
+              </ul>
+              <h1 class="logo">Sweet Life</h1>
+          </div>
+      </nav>
+      </header>
+
+    <main>       
+
+        
+<!----------------------------------Order Form Section----------------------------->
+        <div class="body">
+            <img src="images/service_background.jpg" alt="bg">
+            <form id="order" method="post" action="http://mercury.swin.edu.au/it000000/cos10005/formtest.php">
+                <h4>Order Details</h4>
+                <div class="radioinput">
+                    <label>Your order</label>
+                    <input type="radio" onclick="takeOrder();" name="take_order" id="deli" value="delivery">
+                    <label>Delivery</label>
+                    <input type="radio" onclick="takeOrder();" name="take_order" id="pickup" value="pickup">
+                    <label>Pick-up</label>
+                </div>
+                <div id="delivery" style="display:none">
+                    <div class="textinput">
+                        <label>Delivery address</label>
+                        <input id="deliadd" type="text" name="delivery_address" />
+                    </div>
+                    <div class="radioinput">
+                        <label>Billing address same as delivery address</label>
+                        <input id="same" type="checkbox" name="same_as_delivery_address" value="yes" onclick="copy(event)" />
+                    </div>
+                    <div class="textinput">
+                        <label>Billing address</label>
+                        <input id="billadd" type="text" name="billing_adress" />
+                    </div>
+                </div>
+                <div class="textinput">
+                    <label>Contact number</label>
+                    <input id="contact" type="number" name="contact"/>
+                </div>
+                <div class="textinput">
+                    <label>Email (for receipt)</label>
+                    <input type="email" id="email" name="email">
+                </div>
+                <div class="radioinput">
+                    <label>Payment method</label>
+                    <input type="radio" onclick="payOnLine();" name="pay" id="paypickup" value="on_pick-up">
+                    <label>On pick-up</label>
+                    <input type="radio" onclick="payOnLine();" name="pay" id="payonline" value="online"> 
+                    <label>Online</label>
+                </div>
+                <div id="credit-card" style="display:none">
+                    <h4>Credit card information</h4>
+                    <div class="radioinput ">
+                        <label>Type of credit card</label>
+                        <input type ="radio" id="visa" name="card_type" value="Visa" />
+                        <label>Visa</label>
+                        <input type ="radio" id="master" name="card_type" value="Mastercard" />
+                        <label>Mastercard</label>
+                        <input type ="radio" id="american" name="card_type" value="American_Express" />
+                        <label>American Express</label>
+                    </div>
+                    <div class="textinput">
+                        <label>Credit card number</label>
+                        <input id="creditnumber" type="number" name="credit_number"/>
+                    </div>
+                       
+                
+                </div>
+                <input class="button" type="submit" value="Submit" />
+                <input class="button" type="reset" value="Reset" />
+            </form>
+        </div>
+<!----------------------------------Footer Section----------------------------->
+<footer>
+    <p><span class="sweetLife">Sweet Life</span> | © 2023 The Sweet Life Seabrook, WA</p>
+  </footer>
+    </main>
+</body>
+</html>

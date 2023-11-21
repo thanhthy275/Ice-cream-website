@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">	
+	<meta name="description" content="Web development">
+	<meta name="keywords"    content="registration page">
+	<meta name="author"      content="Thanh Thy">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Assignment 2 - Sweet Life</title>
+      <!-- add icon title-->
+  <link rel = "icon" href = "images/icon-profile.png" type = "image/x-icon">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/mobile.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+  <script src="js/register.js"></script> 
+</head>
+<body>
+       <!----------------------------------NAV Section----------------------------->    
+       <header>
+        <nav class="navbar">
+          <div class="navbar-container container">
+              <input type="checkbox">
+              <div class="nav-lines">
+                  <span class="line line1"></span>
+                  <span class="line line2"></span>
+                  <span class="line line3"></span>
+              </div>
+              <ul class="menu-items">
+                <li><a href="index.html">Home</a></li>  
+                <li><a class="active" href="#registration">Register</a></li>
+                <li><a href="order.html">Order</a></li>
+                <li><a href="features.html">Features</a></li>
+              </ul>
+              <h1 class="logo">Sweet Life</h1>
+          </div>
+      </nav>
+      </header>
+
+<!----------------------------------Register Form Section----------------------------->
+    <div class="body">
+      <img src="images/background_homepage.jpg" alt="bg">
+      <form id="register-form" action="http://mercury.swin.edu.au/it000000/cos10005/regtest.php" method="post" name="main_form">
+        <h4>Registration</h4>
+        <div class="lable-name">Name</div>
+        <input name="name" id="uname" type="text" placeholder="Enter your name" >
+        <div class="radioinput">
+          <div class="lable-name">Gender</div>
+          <span>
+            <input type="radio" onclick="yesnoCheck();" name="gender" id="genm" value="Male">
+            <label>Male</label>
+            <input type="radio" onclick="yesnoCheck();" name="gender" id="genf" value="Female">
+            <label>Female</label>
+          </span>
+        </div>
+
+        <div>
+          <label for="age">Age</label>
+          <select name="age" id="age">
+            <option value="">---Your age---</option>
+            <option id="age18" value="Under 18">Under 18</option>
+            <option id="age1825" value="18-25">18-25</option>
+            <option id="age2635" value="26-35">26-35</option>
+            <option id="ageabove35" value="Above 35">Above 35</option>
+          </select>
+        </div>
+
+        <div class="lable-name">Your favorite ice-cream</div>
+        <div>
+          <input type="checkbox" id="mixed-icecream" name="mixed-icecream" value="Mixed Ice Cream">
+          <label for="mixed-icecream"> Mixed Ice Cream</label><br>
+          <input type="checkbox" id="strawberry" name="strawberry" value="Strawberry">
+          <label for="strawberry"> Strawberry Ice Cream</label><br>
+          <input type="checkbox" id="chocolate-chip" name="chocolate-chip" value="Chocolate Chip Ice Cream">
+          <label for="chocolate-chip"> Chocolate Chip Ice Cream</label><br>
+          <input type="checkbox" id="teaberry" name="teaberry" value="Teaberry">
+          <label for="teaberry"> Teaberry</label><br>
+        </div>
+        
+       
+        <div><label for="uname">Postcode</label></div>
+        <input id="postcode" type="number" placeholder="Enter Postcode" name="postcode"/>
+        <div><label for="useremail">Email Address</label></div>				
+        <input name="email" id="useremail" type="email" placeholder="Enter email" > 
+        <div><label for="pwd1">Password</label></div>
+        <input name="password" id="pwd1" type="password" placeholder="Enter password" >
+        <div><label for="pwd2">Confirm password</label></div>
+        <input name="confirmPassword" id="pwd2" type="password" placeholder="Confirm password" > 
+        
+
+        <input class="button" type="submit" value="Register" name="submit">		
+      </form>	
+    </div>
+
+
+    
+<!----------------------------------Footer Section----------------------------->
+<footer>
+  <p><span class="sweetLife">Sweet Life</span> | © 2023 The Sweet Life Seabrook, WA</p>
+  <div class="social-icon">
+      <i class="fab fa-twitter"></i>
+      <i class=" fab fa-facebook-f"></i>
+      <i class="fab fa-instagram"></i>
+  </div>
+</footer>
+</body>
+</html>
